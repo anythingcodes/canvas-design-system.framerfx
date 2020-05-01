@@ -59,8 +59,8 @@ export const controls: Controls = {
   },
   size: {
     title: 'Size',
-    options: ['default', 'compact', 'large'],
-    optionTitles: ['Default', 'Compact', 'Large'],
+    options: ['default', 'small', 'extra-small'],
+    optionTitles: ['Default', 'Small', 'Extra Small'],
     defaultValue: 'default',
     type: ControlType.Enum,
   },
