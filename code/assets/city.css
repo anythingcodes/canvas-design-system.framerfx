@@ -1,0 +1,21 @@
+.illustration-primary-fill {
+  fill: #89dac1;
+}
+.illustration-secondary-fill {
+  fill: #5879da;
+}
+.illustration-tertiary-fill {
+  fill: #1a3177;
+}
+.illustration-primary-stroke {
+  stroke: #89dac1;
+  fill: none;
+}
+.illustration-secondary-stroke {
+  stroke: #5879da;
+  fill: none;
+}
+.illustration-tertiary-stroke {
+  stroke: #1a3177;
+  fill: none;
+}

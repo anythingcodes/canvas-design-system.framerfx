@@ -1,0 +1,858 @@
+{
+  "packageName": "baseui",
+  "rootFiles": [
+    "node_modules/baseui/a11y/index.d.ts",
+    "node_modules/baseui/accordion/index.d.ts",
+    "node_modules/baseui/aspect-ratio-box/index.d.ts",
+    "node_modules/baseui/avatar/index.d.ts",
+    "node_modules/baseui/block/index.d.ts",
+    "node_modules/baseui/breadcrumbs/index.d.ts",
+    "node_modules/baseui/button-group/index.d.ts",
+    "node_modules/baseui/button/index.d.ts",
+    "node_modules/baseui/card/index.d.ts",
+    "node_modules/baseui/checkbox/index.d.ts",
+    "node_modules/baseui/datepicker/index.d.ts",
+    "node_modules/baseui/dnd-list/index.d.ts",
+    "node_modules/baseui/file-uploader/index.d.ts",
+    "node_modules/baseui/flex-grid/index.d.ts",
+    "node_modules/baseui/form-control/index.d.ts",
+    "node_modules/baseui/header-navigation/index.d.ts",
+    "node_modules/baseui/heading/index.d.ts",
+    "node_modules/baseui/icon/index.d.ts",
+    "node_modules/baseui/input/index.d.ts",
+    "node_modules/baseui/layer/index.d.ts",
+    "node_modules/baseui/link/index.d.ts",
+    "node_modules/baseui/menu/index.d.ts",
+    "node_modules/baseui/modal/index.d.ts",
+    "node_modules/baseui/notification/index.d.ts",
+    "node_modules/baseui/pagination/index.d.ts",
+    "node_modules/baseui/payment-card/index.d.ts",
+    "node_modules/baseui/phone-input/index.d.ts",
+    "node_modules/baseui/pin-code/index.d.ts",
+    "node_modules/baseui/popover/index.d.ts",
+    "node_modules/baseui/progress-bar/index.d.ts",
+    "node_modules/baseui/progress-steps/index.d.ts",
+    "node_modules/baseui/radio/index.d.ts",
+    "node_modules/baseui/rating/index.d.ts",
+    "node_modules/baseui/select/index.d.ts",
+    "node_modules/baseui/side-navigation/index.d.ts",
+    "node_modules/baseui/slider/index.d.ts",
+    "node_modules/baseui/spinner/index.d.ts",
+    "node_modules/baseui/table-grid/index.d.ts",
+    "node_modules/baseui/table/index.d.ts",
+    "node_modules/baseui/tabs/index.d.ts",
+    "node_modules/baseui/tag/index.d.ts",
+    "node_modules/baseui/textarea/index.d.ts",
+    "node_modules/baseui/toast/index.d.ts",
+    "node_modules/baseui/tooltip/index.d.ts",
+    "node_modules/baseui/typography/index.d.ts"
+  ],
+  "additionalImports": [],
+  "out": "code/",
+  "components": {
+    "Unstable_A11y": {
+      "ignore": true
+    },
+    "Accordion": {
+      "ignore": false
+    },
+    "Panel": {
+      "ignore": false
+    },
+    "StatefulPanel": {
+      "ignore": false
+    },
+    "StatefulPanelContainer": {
+      "ignore": false
+    },
+    "StyledRoot": {
+      "ignore": false
+    },
+    "StyledPanelContainer": {
+      "ignore": false
+    },
+    "StyledHeader": {
+      "ignore": false
+    },
+    "StyledContent": {
+      "ignore": false
+    },
+    "StyledToggleIcon": {
+      "ignore": false
+    },
+    "AspectRatioBox": {
+      "ignore": true
+    },
+    "AspectRatioBoxBody": {
+      "ignore": true
+    },
+    "Avatar": {
+      "ignore": false
+    },
+    "StyledAvatar": {
+      "ignore": false
+    },
+    "StyledInitials": {
+      "ignore": false
+    },
+    "Block": {
+      "ignore": true
+    },
+    "Breadcrumbs": {
+      "ignore": false
+    },
+    "StyledSeparator": {
+      "ignore": false
+    },
+    "ButtonGroup": {
+      "ignore": false
+    },
+    "StatefulButtonGroup": {
+      "ignore": false
+    },
+    "StatefulContainer": {
+      "ignore": false
+    },
+    "StyledBaseButton": {
+      "ignore": false
+    },
+    "StyledStartEnhancer": {
+      "ignore": false
+    },
+    "StyledEndEnhancer": {
+      "ignore": false
+    },
+    "StyledLoadingSpinner": {
+      "ignore": false
+    },
+    "StyledLoadingSpinnerContainer": {
+      "ignore": false
+    },
+    "Button": {
+      "ignore": false
+    },
+    "Card": {
+      "ignore": false
+    },
+    "StyledAction": {
+      "ignore": false
+    },
+    "StyledBody": {
+      "ignore": false
+    },
+    "StyledContents": {
+      "ignore": false
+    },
+    "StyledHeaderImage": {
+      "ignore": false
+    },
+    "StyledThumbnail": {
+      "ignore": false
+    },
+    "StyledTitle": {
+      "ignore": false
+    },
+    "StyledWrapper": {
+      "ignore": false
+    },
+    "StyledCheckmark": {
+      "ignore": false
+    },
+    "StyledLabel": {
+      "ignore": false
+    },
+    "StyledInput": {
+      "ignore": false
+    },
+    "StyledToggle": {
+      "ignore": false
+    },
+    "StyledToggleInner": {
+      "ignore": false
+    },
+    "StyledToggleTrack": {
+      "ignore": false
+    },
+    "StatefulCheckbox": {
+      "ignore": false
+    },
+    "Checkbox": {
+      "ignore": false
+    },
+    "Calendar": {
+      "ignore": true
+    },
+    "StatefulCalendar": {
+      "ignore": true
+    },
+    "Datepicker": {
+      "ignore": false
+    },
+    "StatefulDatepicker": {
+      "ignore": false
+    },
+    "TimePicker": {
+      "ignore": false
+    },
+    "TimezonePicker": {
+      "ignore": false
+    },
+    "WEEKDAYS": {
+      "ignore": false
+    },
+    "StatefulList": {
+      "ignore": false
+    },
+    "StatefulListContainer": {
+      "ignore": false
+    },
+    "List": {
+      "ignore": false
+    },
+    "StyledList": {
+      "ignore": false
+    },
+    "StyledItem": {
+      "ignore": false
+    },
+    "StyledDragHandle": {
+      "ignore": false
+    },
+    "StyledCloseHandle": {
+      "ignore": false
+    },
+    "FileUploader": {
+      "ignore": false
+    },
+    "StyledFileDragAndDrop": {
+      "ignore": false
+    },
+    "StyledContentMessage": {
+      "ignore": false
+    },
+    "StyledErrorMessage": {
+      "ignore": false
+    },
+    "StyledHiddenInput": {
+      "ignore": false
+    },
+    "FlexGrid": {
+      "ignore": false
+    },
+    "FlexGridItem": {
+      "ignore": false
+    },
+    "StyledCaption": {
+      "ignore": false
+    },
+    "StyledControlContainer": {
+      "ignore": false
+    },
+    "FormControl": {
+      "ignore": false
+    },
+    "HeaderNavigation": {
+      "ignore": false
+    },
+    "StyledNavigationItem": {
+      "ignore": false
+    },
+    "StyledNavigationList": {
+      "ignore": false
+    },
+    "HeadingLevel": {
+      "ignore": false
+    },
+    "Heading": {
+      "ignore": false
+    },
+    "Icon": {
+      "ignore": false
+    },
+    "StyledSvg": {
+      "ignore": false
+    },
+    "Alert": {
+      "ignore": false
+    },
+    "ArrowDown": {
+      "ignore": false
+    },
+    "ArrowLeft": {
+      "ignore": false
+    },
+    "ArrowRight": {
+      "ignore": false
+    },
+    "ArrowUp": {
+      "ignore": false
+    },
+    "CheckIndeterminate": {
+      "ignore": true
+    },
+    "Check": {
+      "ignore": false
+    },
+    "ChevronDown": {
+      "ignore": false
+    },
+    "ChevronLeft": {
+      "ignore": false
+    },
+    "ChevronRight": {
+      "ignore": false
+    },
+    "ChevronUp": {
+      "ignore": false
+    },
+    "DeleteAlt": {
+      "ignore": false
+    },
+    "Delete": {
+      "ignore": false
+    },
+    "Filter": {
+      "ignore": false
+    },
+    "Grab": {
+      "ignore": false
+    },
+    "Menu": {
+      "ignore": false
+    },
+    "Overflow": {
+      "ignore": false
+    },
+    "Plus": {
+      "ignore": false
+    },
+    "Search": {
+      "ignore": false
+    },
+    "Spinner": {
+      "ignore": false
+    },
+    "TriangleDown": {
+      "ignore": false
+    },
+    "TriangleLeft": {
+      "ignore": false
+    },
+    "TriangleRight": {
+      "ignore": false
+    },
+    "TriangleUp": {
+      "ignore": false
+    },
+    "Upload": {
+      "ignore": false
+    },
+    "Input": {
+      "ignore": false
+    },
+    "BaseInput": {
+      "ignore": false
+    },
+    "MaskedInput": {
+      "ignore": false
+    },
+    "StatefulInput": {
+      "ignore": false
+    },
+    "StyledInputEnhancer": {
+      "ignore": false
+    },
+    "StyledInputContainer": {
+      "ignore": false
+    },
+    "TetherBehavior": {
+      "ignore": false
+    },
+    "LayersManager": {
+      "ignore": false
+    },
+    "Layer": {
+      "ignore": false
+    },
+    "StyledLink": {
+      "ignore": false
+    },
+    "StatefulMenu": {
+      "ignore": false
+    },
+    "OptionList": {
+      "ignore": false
+    },
+    "OptionProfile": {
+      "ignore": false
+    },
+    "NestedMenus": {
+      "ignore": false
+    },
+    "StyledListItem": {
+      "ignore": false
+    },
+    "StyledListItemProfile": {
+      "ignore": false
+    },
+    "StyledProfileImgContainer": {
+      "ignore": false
+    },
+    "StyledProfileImg": {
+      "ignore": false
+    },
+    "StyledProfileLabelsContainer": {
+      "ignore": false
+    },
+    "StyledProfileTitle": {
+      "ignore": false
+    },
+    "StyledProfileSubtitle": {
+      "ignore": false
+    },
+    "StyledProfileBody": {
+      "ignore": false
+    },
+    "Modal": {
+      "ignore": false
+    },
+    "ModalButton": {
+      "ignore": false
+    },
+    "FocusOnce": {
+      "ignore": false
+    },
+    "StyledBackdrop": {
+      "ignore": false
+    },
+    "StyledDialog": {
+      "ignore": false
+    },
+    "StyledDialogContainer": {
+      "ignore": false
+    },
+    "StyledClose": {
+      "ignore": false
+    },
+    "ModalHeader": {
+      "ignore": false
+    },
+    "ModalBody": {
+      "ignore": false
+    },
+    "ModalFooter": {
+      "ignore": false
+    },
+    "Notification": {
+      "ignore": false
+    },
+    "Pagination": {
+      "ignore": false
+    },
+    "StatefulPagination": {
+      "ignore": false
+    },
+    "StyledMaxLabel": {
+      "ignore": false
+    },
+    "StyledDropdownContainer": {
+      "ignore": false
+    },
+    "StatefulPaymentCard": {
+      "ignore": false
+    },
+    "PaymentCard": {
+      "ignore": false
+    },
+    "StyledIconWrapper": {
+      "ignore": false
+    },
+    "PhoneInput": {
+      "ignore": false
+    },
+    "StatefulPhoneInput": {
+      "ignore": false
+    },
+    "StatefulPhoneInputContainer": {
+      "ignore": false
+    },
+    "CountrySelect": {
+      "ignore": true
+    },
+    "CountrySelectDropdown": {
+      "ignore": true
+    },
+    "Flag": {
+      "ignore": false
+    },
+    "StyledFlag": {
+      "ignore": false
+    },
+    "StyledDialCode": {
+      "ignore": false
+    },
+    "StyledCountrySelectDropdownContainer": {
+      "ignore": false
+    },
+    "StyledCountrySelectDropdownListItem": {
+      "ignore": false
+    },
+    "StyledCountrySelectDropdownFlagColumn": {
+      "ignore": false
+    },
+    "StyledCountrySelectDropdownNameColumn": {
+      "ignore": false
+    },
+    "StyledCountrySelectDropdownDialcodeColumn": {
+      "ignore": false
+    },
+    "StatefulPinCode": {
+      "ignore": false
+    },
+    "PinCode": {
+      "ignore": false
+    },
+    "StatefulPopover": {
+      "ignore": false
+    },
+    "Popover": {
+      "ignore": false
+    },
+    "StyledArrow": {
+      "ignore": false
+    },
+    "StyledInner": {
+      "ignore": false
+    },
+    "StyledPadding": {
+      "ignore": false
+    },
+    "ProgressBar": {
+      "ignore": false
+    },
+    "StyledBar": {
+      "ignore": false
+    },
+    "StyledBarProgress": {
+      "ignore": false
+    },
+    "ProgressSteps": {
+      "ignore": false
+    },
+    "Step": {
+      "ignore": false
+    },
+    "NumberedStep": {
+      "ignore": false
+    },
+    "StyledProgressSteps": {
+      "ignore": false
+    },
+    "StyledStep": {
+      "ignore": false
+    },
+    "StyledIcon": {
+      "ignore": false
+    },
+    "StyledInnerIcon": {
+      "ignore": false
+    },
+    "StyledContentTitle": {
+      "ignore": false
+    },
+    "StyledContentTail": {
+      "ignore": false
+    },
+    "StyledContentDescription": {
+      "ignore": false
+    },
+    "StyledNumberStep": {
+      "ignore": false
+    },
+    "StyledNumberIcon": {
+      "ignore": false
+    },
+    "StyledNumberContentTail": {
+      "ignore": false
+    },
+    "StatefulRadioGroup": {
+      "ignore": false
+    },
+    "RadioGroup": {
+      "ignore": false
+    },
+    "Radio": {
+      "ignore": false
+    },
+    "StyledDescription": {
+      "ignore": false
+    },
+    "StyledRadioMarkInner": {
+      "ignore": false
+    },
+    "StyledRadioMarkOuter": {
+      "ignore": false
+    },
+    "StyledRadioGroupRoot": {
+      "ignore": false
+    },
+    "StarRating": {
+      "ignore": false
+    },
+    "EmoticonRating": {
+      "ignore": false
+    },
+    "StyledStar": {
+      "ignore": false
+    },
+    "StyledEmoticon": {
+      "ignore": false
+    },
+    "Select": {
+      "ignore": false
+    },
+    "SingleValue": {
+      "ignore": false
+    },
+    "MultiValue": {
+      "ignore": false
+    },
+    "AutosizeInput": {
+      "ignore": true
+    },
+    "SelectDropdown": {
+      "ignore": false
+    },
+    "StatefulSelect": {
+      "ignore": false
+    },
+    "StatefulSelectContainer": {
+      "ignore": false
+    },
+    "StyledValueContainer": {
+      "ignore": false
+    },
+    "StyledPlaceholder": {
+      "ignore": false
+    },
+    "StyledSingleValue": {
+      "ignore": false
+    },
+    "StyledInputSizer": {
+      "ignore": false
+    },
+    "StyledIconsContainer": {
+      "ignore": false
+    },
+    "StyledSelectArrow": {
+      "ignore": false
+    },
+    "StyledClearIcon": {
+      "ignore": false
+    },
+    "StyledSearchIcon": {
+      "ignore": false
+    },
+    "StyledDropdown": {
+      "ignore": false
+    },
+    "StyledDropdownListItem": {
+      "ignore": false
+    },
+    "StyledOptionContent": {
+      "ignore": false
+    },
+    "Navigation": {
+      "ignore": false
+    },
+    "NavItem": {
+      "ignore": false
+    },
+    "StyledNavItemContainer": {
+      "ignore": false
+    },
+    "StyledNavLink": {
+      "ignore": false
+    },
+    "StyledNavItem": {
+      "ignore": false
+    },
+    "StyledSubNavContainer": {
+      "ignore": false
+    },
+    "Slider": {
+      "ignore": false
+    },
+    "StatefulSlider": {
+      "ignore": false
+    },
+    "StyledTrack": {
+      "ignore": false
+    },
+    "StyledInnerTrack": {
+      "ignore": false
+    },
+    "StyledThumb": {
+      "ignore": false
+    },
+    "StyledInnerThumb": {
+      "ignore": false
+    },
+    "StyledTick": {
+      "ignore": false
+    },
+    "StyledTickBar": {
+      "ignore": false
+    },
+    "StyledTrackPath": {
+      "ignore": false
+    },
+    "StyledActivePath": {
+      "ignore": false
+    },
+    "Unstable_StyledTable": {
+      "ignore": true
+    },
+    "Unstable_StyledHeadCell": {
+      "ignore": true
+    },
+    "Unstable_StyledBodyCell": {
+      "ignore": true
+    },
+    "SortableHeadCell": {
+      "ignore": false
+    },
+    "Table": {
+      "ignore": false
+    },
+    "StyledTable": {
+      "ignore": false
+    },
+    "StyledFilterButton": {
+      "ignore": false
+    },
+    "StyledFilterContent": {
+      "ignore": false
+    },
+    "StyledFilterHeading": {
+      "ignore": false
+    },
+    "StyledFilterFooter": {
+      "ignore": false
+    },
+    "StyledHead": {
+      "ignore": false
+    },
+    "StyledHeadCell": {
+      "ignore": false
+    },
+    "StyledRow": {
+      "ignore": false
+    },
+    "StyledCell": {
+      "ignore": false
+    },
+    "StyledSortableLabel": {
+      "ignore": false
+    },
+    "Tabs": {
+      "ignore": false
+    },
+    "StatefulTabs": {
+      "ignore": false
+    },
+    "Tab": {
+      "ignore": false
+    },
+    "StyledTab": {
+      "ignore": false
+    },
+    "StyledTabBar": {
+      "ignore": false
+    },
+    "StyledTabContent": {
+      "ignore": false
+    },
+    "Tag": {
+      "ignore": false
+    },
+    "StyledActionIcon": {
+      "ignore": false
+    },
+    "StyledText": {
+      "ignore": false
+    },
+    "Textarea": {
+      "ignore": false
+    },
+    "StatefulTextarea": {
+      "ignore": false
+    },
+    "StyledTextareaContainer": {
+      "ignore": false
+    },
+    "StyledTextarea": {
+      "ignore": false
+    },
+    "ToasterContainer": {
+      "ignore": false
+    },
+    "Toast": {
+      "ignore": false
+    },
+    "Root": {
+      "ignore": false
+    },
+    "Body": {
+      "ignore": true
+    },
+    "CloseIconSvg": {
+      "ignore": true
+    },
+    "StatefulTooltip": {
+      "ignore": false
+    },
+    "Tooltip": {
+      "ignore": false
+    },
+    "Caption1": {
+      "ignore": false
+    },
+    "Caption2": {
+      "ignore": false
+    },
+    "Display": {
+      "ignore": false
+    },
+    "H1": {
+      "ignore": false
+    },
+    "H2": {
+      "ignore": false
+    },
+    "H3": {
+      "ignore": false
+    },
+    "H4": {
+      "ignore": false
+    },
+    "H5": {
+      "ignore": false
+    },
+    "H6": {
+      "ignore": false
+    },
+    "Label1": {
+      "ignore": false
+    },
+    "Label2": {
+      "ignore": false
+    },
+    "Paragraph1": {
+      "ignore": false
+    },
+    "Paragraph2": {
+      "ignore": false
+    }
+  }
+}

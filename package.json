@@ -1,0 +1,32 @@
+{
+	"license": "MIT",
+	"main": "dist/index.js",
+	"devDependencies": {
+		"@types/react": "^16.8",
+		"prettier": "^1.18.2"
+	},
+	"peerDependencies": {
+		"framer": "^1.0",
+		"react": "^16.8"
+	},
+	"framer": {
+		"displayName": "Canvas Design System"
+	},
+	"author": "Liz Shaw",
+	"dependencies": {
+		"@types/styletron-engine-atomic": "^1.1.0",
+		"@types/styletron-react": "^5.0.1",
+		"@types/styletron-standard": "^2.0.0",
+		"baseui": "^9.5.1",
+		"object-hash": "^1.3.1",
+		"reactn": "^2.2.1",
+		"smoothscroll-polyfill": "^0.4.4",
+		"styletron-engine-atomic": "^1.4.0",
+		"styletron-react": "^5.2.0"
+	},
+	"scripts": {
+		"format": "prettier --write './code/**'"
+	},
+	"name": "@framer/lizhubspot.canvas-design-system",
+	"version": "1.3.0"
+}
