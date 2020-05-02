@@ -16,7 +16,7 @@ All components have been split into sections for usability, and with the intenti
 
 - Theming support is to be considered a work in progress.
 
-#### Faq
+#### FAQs
 
 - What is the `code/generated` folder?
 
