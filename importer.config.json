@@ -1,5 +1,5 @@
 {
-  "packageName": "baseui",
+  "packageName": "canvas-design-system",
   "rootFiles": [
     "./baseui/block/index.d.ts",
     "./baseui/button/index.d.ts",
@@ -13,7 +13,7 @@
     "./baseui/typography/index.d.ts"
   ],
   "additionalImports": [],
-  "out": "code/",
+  "out": "code/generated",
   "components": {
     "AspectRatioBox": {
       "ignore": true

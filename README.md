@@ -1,21 +1,19 @@
 # Canvas Design System
 
-> **Note:** This is a work in progress.
+> **Note:** This is a work in progress. Please check back later!
 
-HubSpot's [Canvas design system](https://canvas.hubspot.com/) as a Framer X package.
+HubSpot's [Canvas design system](https://canvas.hubspot.com/) as a Framer X package. Inspired by [baseui.framerx](https://github.com/framer/baseui.framerfx).
 
-![Canvas design system](https://github.com/anythingcodes/canvas-design-system.framerfx/raw/master/metadata/background.png 'Canvas design system')
+[View on the Framer store](https://packages.framer.com/package/lizhubspot/canvas-design-system)
 
 #### Sections
 
-All components have been split into sections with the intention to replicate the Canvas documentation page.
+All components have been split into sections for usability, and with the intention to one day mirror the [Canvas documentation](https://canvas.hubspot.com/).
 
 ![Sections](https://github.com/framer/baseui.framerfx/raw/master/metadata/sections.png 'Sections')
 
 #### Known Issues 🚧
 
-- Select's dropdowns are sometimes rendered below other components. There seems to be a z-index problem here.
-- File Uploader currently does nothing.
 - Theming support is to be considered a work in progress.
 
 #### Faq
