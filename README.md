@@ -4,7 +4,7 @@
 
 HubSpot's [Canvas design system](https://canvas.hubspot.com/) as a Framer X package. Inspired by [baseui.framerx](https://github.com/framer/baseui.framerfx).
 
-[View on the Framer store](https://packages.framer.com/package/lizhubspot/canvas-design-system)
+[View on the Framer site](https://packages.framer.com/package/lizhubspot/canvas-design-system)
 
 #### Sections
 
