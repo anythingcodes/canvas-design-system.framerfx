@@ -10,7 +10,7 @@ HubSpot's [Canvas design system](https://canvas.hubspot.com/) as a Framer X pack
 
 All components have been split into sections for usability, and with the intention to one day mirror the [Canvas documentation](https://canvas.hubspot.com/).
 
-![Sections](https://github.com/framer/baseui.framerfx/raw/master/metadata/sections.png 'Sections')
+![Sections](https://github.com/anythingcodes/canvas-design-system.framerfx/raw/master/metadata/sections.png 'Sections')
 
 #### Known Issues 🚧
 
