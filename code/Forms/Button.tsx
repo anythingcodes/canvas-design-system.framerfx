@@ -5,8 +5,8 @@ import {addPropertyControls, ControlType, PropertyControls} from 'framer';
 import {Modal} from '../../baseui/modal';
 import {controls, merge} from '../generated/Button';
 import {withHOC} from '../withHOC';
-import {RawIcons} from '../icons/utils';
-import {isModal} from '../surfaces/Modal';
+import {RawIcons} from '../Icons/utils';
+import {isModal} from '../Containers/Modal';
 import {pick} from '../../utils/pick';
 
 const InnerButton: React.SFC<any> = ({

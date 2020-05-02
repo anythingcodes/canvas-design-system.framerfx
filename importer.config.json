@@ -13,7 +13,7 @@
     "./baseui/typography/index.d.ts"
   ],
   "additionalImports": [],
-  "out": "cod/e",
+  "out": "code/",
   "components": {
     "AspectRatioBox": {
       "ignore": true

@@ -1,9 +1,9 @@
-import Icon from "baseui/icon/delete-alt"
-import * as React from "react"
-import { withIcon } from "./withIcon"
+import Icon from '../../baseui/icon/delete-alt';
+import * as React from 'react';
+import {withIcon} from './withIcon';
 
 const Wrapper: React.SFC = props => {
-  return <Icon {...props} />
-}
+  return <Icon {...props} />;
+};
 
-export const DeleteAlt = withIcon(Wrapper)
+export const DeleteAlt = withIcon(Wrapper);
