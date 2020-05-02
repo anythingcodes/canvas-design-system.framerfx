@@ -1,21 +1,21 @@
-import * as React from "react"
-import * as System from "baseui/typography"
-import { addPropertyControls } from "framer"
-import { withHOC } from "../withHOC"
-import { TextPropertyControl, ColorPropertyControl } from "../utils/PropertyControls"
+import * as React from 'react';
+import * as System from '../../baseui/typography';
+import {addPropertyControls} from 'framer';
+import {withHOC} from '../withHOC';
+import {TextPropertyControl, ColorPropertyControl} from '../../utils/PropertyControls';
 
-const InnerParagraph1: React.SFC<any> = ({ text, ["children"]: _, willChangeTransform: __, ...props }) => {
-  return <System.Paragraph1 {...props}>{text}</System.Paragraph1>
-}
+const InnerParagraph: React.SFC<any> = ({text, ['children']: _, willChangeTransform: __, ...props}) => {
+  return <System.Paragraph {...props}>{text}</System.Paragraph>;
+};
 
-export const Paragraph1 = withHOC(InnerParagraph1)
+export const Paragraph = withHOC(InnerParagraph);
 
-Paragraph1.defaultProps = {
+Paragraph.defaultProps = {
   width: 75,
   height: 33,
-}
+};
 
-addPropertyControls(Paragraph1, {
+addPropertyControls(Paragraph, {
   ...TextPropertyControl,
   ...ColorPropertyControl,
-})
+});

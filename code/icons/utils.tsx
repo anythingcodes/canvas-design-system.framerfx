@@ -24,7 +24,7 @@ import {
   TriangleRight,
   TriangleUp,
   Upload,
-} from "baseui/icon"
+} from '../../baseui/icon';
 
 export const RawIcons = {
   Alert,
@@ -52,4 +52,4 @@ export const RawIcons = {
   TriangleRight,
   TriangleUp,
   Upload,
-}
+};

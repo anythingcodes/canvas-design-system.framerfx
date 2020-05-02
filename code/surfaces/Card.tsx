@@ -1,11 +1,11 @@
-import {Button} from 'baseui/button';
-import * as System from 'baseui/card';
+import {Button} from '../../baseui/button';
+import * as System from '../../baseui/card';
 import {addPropertyControls, ControlType} from 'framer';
 import * as React from 'react';
 import {controls, merge} from '../generated/Card';
 import {ButtonPropertyControls} from '../inputs/Button';
-import {omit} from '../utils/omit';
-import {ThemePropertyControl} from '../utils/PropertyControls';
+import {omit} from '../../utils/omit';
+import {ThemePropertyControl} from '../../utils/PropertyControls';
 import {withHOC} from '../withHOC';
 
 const excludedProps = [

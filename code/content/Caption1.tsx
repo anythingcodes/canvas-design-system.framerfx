@@ -1,21 +1,21 @@
-import * as React from "react"
-import * as System from "baseui/typography"
-import { addPropertyControls } from "framer"
-import { withHOC } from "../withHOC"
-import { TextPropertyControl, ColorPropertyControl } from "../utils/PropertyControls"
+import * as React from 'react';
+import * as System from '../../baseui/typography';
+import {addPropertyControls} from 'framer';
+import {withHOC} from '../withHOC';
+import {TextPropertyControl, ColorPropertyControl} from '../../utils/PropertyControls';
 
-const InnerCaption1: React.SFC<any> = ({ text, ["children"]: _, willChangeTransform: __, ...props }) => {
-  return <System.Caption1 {...props}>{text}</System.Caption1>
-}
+const InnerCaption: React.SFC<any> = ({text, ['children']: _, willChangeTransform: __, ...props}) => {
+  return <System.Caption {...props}>{text}</System.Caption>;
+};
 
-export const Caption1 = withHOC(InnerCaption1)
+export const Caption = withHOC(InnerCaption);
 
-Caption1.defaultProps = {
+Caption.defaultProps = {
   width: 85,
   height: 20,
-}
+};
 
-addPropertyControls(Caption1, {
+addPropertyControls(Caption, {
   ...TextPropertyControl,
   ...ColorPropertyControl,
-})
+});

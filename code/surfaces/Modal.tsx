@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {cloneElement} from 'react';
-import * as System from 'baseui/modal';
-import {CloseIcon} from 'baseui/modal/close-icon';
+import * as System from '../../baseui/modal';
+import {CloseIcon} from '../../baseui/modal/close-icon';
 import {addPropertyControls, ControlType, Frame} from 'framer';
 import {controls, merge} from '../generated/Modal';
 import {withHOC} from '../withHOC';

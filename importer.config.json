@@ -1,85 +1,20 @@
 {
   "packageName": "baseui",
   "rootFiles": [
-    "node_modules/baseui/a11y/index.d.ts",
-    "node_modules/baseui/accordion/index.d.ts",
-    "node_modules/baseui/aspect-ratio-box/index.d.ts",
-    "node_modules/baseui/avatar/index.d.ts",
-    "node_modules/baseui/block/index.d.ts",
-    "node_modules/baseui/breadcrumbs/index.d.ts",
-    "node_modules/baseui/button-group/index.d.ts",
-    "node_modules/baseui/button/index.d.ts",
-    "node_modules/baseui/card/index.d.ts",
-    "node_modules/baseui/checkbox/index.d.ts",
-    "node_modules/baseui/datepicker/index.d.ts",
-    "node_modules/baseui/dnd-list/index.d.ts",
-    "node_modules/baseui/file-uploader/index.d.ts",
-    "node_modules/baseui/flex-grid/index.d.ts",
-    "node_modules/baseui/form-control/index.d.ts",
-    "node_modules/baseui/header-navigation/index.d.ts",
-    "node_modules/baseui/heading/index.d.ts",
-    "node_modules/baseui/icon/index.d.ts",
-    "node_modules/baseui/input/index.d.ts",
-    "node_modules/baseui/layer/index.d.ts",
-    "node_modules/baseui/link/index.d.ts",
-    "node_modules/baseui/menu/index.d.ts",
-    "node_modules/baseui/modal/index.d.ts",
-    "node_modules/baseui/notification/index.d.ts",
-    "node_modules/baseui/pagination/index.d.ts",
-    "node_modules/baseui/payment-card/index.d.ts",
-    "node_modules/baseui/phone-input/index.d.ts",
-    "node_modules/baseui/pin-code/index.d.ts",
-    "node_modules/baseui/popover/index.d.ts",
-    "node_modules/baseui/progress-bar/index.d.ts",
-    "node_modules/baseui/progress-steps/index.d.ts",
-    "node_modules/baseui/radio/index.d.ts",
-    "node_modules/baseui/rating/index.d.ts",
-    "node_modules/baseui/select/index.d.ts",
-    "node_modules/baseui/side-navigation/index.d.ts",
-    "node_modules/baseui/slider/index.d.ts",
-    "node_modules/baseui/spinner/index.d.ts",
-    "node_modules/baseui/table-grid/index.d.ts",
-    "node_modules/baseui/table/index.d.ts",
-    "node_modules/baseui/tabs/index.d.ts",
-    "node_modules/baseui/tag/index.d.ts",
-    "node_modules/baseui/textarea/index.d.ts",
-    "node_modules/baseui/toast/index.d.ts",
-    "node_modules/baseui/tooltip/index.d.ts",
-    "node_modules/baseui/typography/index.d.ts"
+    "./baseui/block/index.d.ts",
+    "./baseui/button/index.d.ts",
+    "./baseui/card/index.d.ts",
+    "./baseui/heading/index.d.ts",
+    "./baseui/icon/index.d.ts",
+    "./baseui/layer/index.d.ts",
+    "./baseui/modal/index.d.ts",
+    "./baseui/progress-bar/index.d.ts",
+    "./baseui/progress-steps/index.d.ts",
+    "./baseui/typography/index.d.ts"
   ],
   "additionalImports": [],
   "out": "code/",
   "components": {
-    "Unstable_A11y": {
-      "ignore": true
-    },
-    "Accordion": {
-      "ignore": false
-    },
-    "Panel": {
-      "ignore": false
-    },
-    "StatefulPanel": {
-      "ignore": false
-    },
-    "StatefulPanelContainer": {
-      "ignore": false
-    },
-    "StyledRoot": {
-      "ignore": false
-    },
-    "StyledPanelContainer": {
-      "ignore": false
-    },
-    "StyledHeader": {
-      "ignore": false
-    },
-    "StyledContent": {
-      "ignore": false
-    },
-    "StyledToggleIcon": {
-      "ignore": false
-    },
     "AspectRatioBox": {
       "ignore": true
     },
@@ -662,142 +597,10 @@
     "StyledOptionContent": {
       "ignore": false
     },
-    "Navigation": {
-      "ignore": false
-    },
-    "NavItem": {
-      "ignore": false
-    },
-    "StyledNavItemContainer": {
-      "ignore": false
-    },
-    "StyledNavLink": {
-      "ignore": false
-    },
-    "StyledNavItem": {
-      "ignore": false
-    },
-    "StyledSubNavContainer": {
-      "ignore": false
-    },
-    "Slider": {
-      "ignore": false
-    },
-    "StatefulSlider": {
-      "ignore": false
-    },
-    "StyledTrack": {
-      "ignore": false
-    },
-    "StyledInnerTrack": {
-      "ignore": false
-    },
-    "StyledThumb": {
-      "ignore": false
-    },
-    "StyledInnerThumb": {
-      "ignore": false
-    },
-    "StyledTick": {
-      "ignore": false
-    },
-    "StyledTickBar": {
-      "ignore": false
-    },
-    "StyledTrackPath": {
-      "ignore": false
-    },
-    "StyledActivePath": {
-      "ignore": false
-    },
-    "Unstable_StyledTable": {
-      "ignore": true
-    },
-    "Unstable_StyledHeadCell": {
-      "ignore": true
-    },
-    "Unstable_StyledBodyCell": {
-      "ignore": true
-    },
-    "SortableHeadCell": {
-      "ignore": false
-    },
-    "Table": {
-      "ignore": false
-    },
-    "StyledTable": {
-      "ignore": false
-    },
-    "StyledFilterButton": {
-      "ignore": false
-    },
-    "StyledFilterContent": {
-      "ignore": false
-    },
-    "StyledFilterHeading": {
-      "ignore": false
-    },
-    "StyledFilterFooter": {
-      "ignore": false
-    },
-    "StyledHead": {
-      "ignore": false
-    },
-    "StyledHeadCell": {
-      "ignore": false
-    },
-    "StyledRow": {
-      "ignore": false
-    },
-    "StyledCell": {
-      "ignore": false
-    },
-    "StyledSortableLabel": {
-      "ignore": false
-    },
-    "Tabs": {
-      "ignore": false
-    },
-    "StatefulTabs": {
-      "ignore": false
-    },
-    "Tab": {
-      "ignore": false
-    },
-    "StyledTab": {
-      "ignore": false
-    },
-    "StyledTabBar": {
-      "ignore": false
-    },
-    "StyledTabContent": {
-      "ignore": false
-    },
-    "Tag": {
-      "ignore": false
-    },
     "StyledActionIcon": {
       "ignore": false
     },
     "StyledText": {
-      "ignore": false
-    },
-    "Textarea": {
-      "ignore": false
-    },
-    "StatefulTextarea": {
-      "ignore": false
-    },
-    "StyledTextareaContainer": {
-      "ignore": false
-    },
-    "StyledTextarea": {
-      "ignore": false
-    },
-    "ToasterContainer": {
-      "ignore": false
-    },
-    "Toast": {
       "ignore": false
     },
     "Root": {
@@ -809,19 +612,7 @@
     "CloseIconSvg": {
       "ignore": true
     },
-    "StatefulTooltip": {
-      "ignore": false
-    },
-    "Tooltip": {
-      "ignore": false
-    },
-    "Caption1": {
-      "ignore": false
-    },
-    "Caption2": {
-      "ignore": false
-    },
-    "Display": {
+    "Caption": {
       "ignore": false
     },
     "H1": {
@@ -842,16 +633,10 @@
     "H6": {
       "ignore": false
     },
-    "Label1": {
+    "Label": {
       "ignore": false
     },
-    "Label2": {
-      "ignore": false
-    },
-    "Paragraph1": {
-      "ignore": false
-    },
-    "Paragraph2": {
+    "Paragraph": {
       "ignore": false
     }
   }
