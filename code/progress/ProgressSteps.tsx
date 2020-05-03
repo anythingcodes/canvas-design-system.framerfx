@@ -1,10 +1,10 @@
-import * as React from 'react';
-import * as System from '../../baseui/progress-steps';
-import {ControlType, PropertyControls, addPropertyControls} from 'framer';
-import {controls, merge} from '../generated/ProgressSteps';
-import {withHOC} from '../withHOC';
-import {ThemePropertyControl} from '../../utils/PropertyControls';
-import {omit} from '../../utils/omit';
+import * as React from './node_modules/react';
+import * as System from '../../../baseui/progress-steps';
+import {ControlType, PropertyControls, addPropertyControls} from './node_modules/framer';
+import {controls, merge} from '../../generated/ProgressSteps';
+import {withHOC} from '../../withHOC';
+import {ThemePropertyControl} from '../../../utils/PropertyControls';
+import {omit} from '../../../utils/omit';
 
 const InnerProgressSteps: React.SFC = props => {
   return (

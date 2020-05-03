@@ -1,5 +1,5 @@
-import Icon from '../../baseui/icon/filter';
-import * as React from 'react';
+import Icon from './node_modules/baseui/icon/filterfilter';
+import * as React from './node_modules/react';
 import {withIcon} from './withIcon';
 
 const Wrapper: React.SFC = props => {

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {StyleObject} from 'styletron-react';
-import {Theme} from './theme';
+import {Theme} from 'baseui/theme'; // TODO: replace
 
 type StyleOverride<T> = StyleObject | ((props: {$theme: Theme} & React.PropsWithChildren<T>) => StyleObject);
 

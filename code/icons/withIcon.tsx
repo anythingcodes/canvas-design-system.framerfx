@@ -1,6 +1,6 @@
-import * as React from "react"
+import * as React from "./node_modules/react"
 import { withHOC } from "../withHOC"
-import { addPropertyControls, ControlType } from "framer"
+import { addPropertyControls, ControlType } from "./node_modules/framer"
 import * as canvas from "../canvas"
 
 export function withIcon(IconComp) {

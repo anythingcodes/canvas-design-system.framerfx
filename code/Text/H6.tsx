@@ -1,21 +1,32 @@
-import * as System from '../../baseui/typography';
-import {addPropertyControls} from 'framer';
 import * as React from 'react';
-import {withHOC} from '../withHOC';
-import {TextPropertyControl, ColorPropertyControl} from '../../utils/PropertyControls';
+import styled from 'styled-components';
+import {addPropertyControls, ControlType} from 'framer';
+import {colors} from '../canvas';
 
-const InnerH6: React.SFC<any> = ({text, ['children']: _, willChangeTransform: __, ...props}) => {
-  return <System.H6 {...props}>{text}</System.H6>;
-};
+const StyledH6 = styled.h6`
+  font-family: 'AvenirNext-DemiBold';
+  font-size: 14px;
+  text-transform: uppercase;
+  color: ${colors.Obsidian};
+  margin-bottom: 16px;
+  margin-top: 0;
+  display: block;
+`;
 
-export const H6 = withHOC(InnerH6);
+StyledH6.displayName = 'H6';
+
+export const H6 = ({textLabel, ...rest}) => <StyledH6 {...rest}>{textLabel}</StyledH6>;
 
 H6.defaultProps = {
-  width: 108,
-  height: 76,
+  height: 44,
+  width: 194,
+  textLabel: 'Heading 6',
 };
 
 addPropertyControls(H6, {
-  ...TextPropertyControl,
-  ...ColorPropertyControl,
+  textLabel: {
+    title: 'Text',
+    type: ControlType.String,
+    defaultValue: 'Heading 6',
+  },
 });

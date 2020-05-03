@@ -66,6 +66,9 @@
     "Button": {
       "ignore": false
     },
+    "Button2": {
+      "ignore": false
+    },
     "Card": {
       "ignore": false
     },

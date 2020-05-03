@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', {
   value: true,
 });
-exports.Caption2 = exports.Caption = exports.Display = exports.Paragraph4 = exports.Paragraph3 = exports.Paragraph2 = exports.Paragraph = exports.Label4 = exports.Label3 = exports.Label2 = exports.Label = exports.H6 = exports.H5 = exports.H4 = exports.H3 = exports.H2 = exports.H1 = exports.Display4 = exports.Display3 = exports.Display2 = exports.Display1 = void 0;
+exports.Caption = exports.Display = exports.Paragraph = exports.Label = exports.H6 = exports.H5 = exports.H4 = exports.H3 = exports.H2 = exports.H1 = exports.Display = void 0;
 
 var React = _interopRequireWildcard(require('react'));
 

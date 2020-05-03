@@ -1,21 +1,32 @@
-import * as System from '../../baseui/typography';
-import {addPropertyControls, ControlType} from 'framer';
 import * as React from 'react';
-import {withHOC} from '../withHOC';
-import {TextPropertyControl, ColorPropertyControl} from '../../utils/PropertyControls';
+import styled from 'styled-components';
+import {addPropertyControls, ControlType} from 'framer';
+import {colors} from '../canvas';
 
-const InnerH3: React.SFC<any> = ({text, ['children']: _, willChangeTransform: __, ...props}) => {
-  return <System.H3 {...props}>{text}</System.H3>;
-};
+const StyledH3 = styled.h3`
+  font-family: 'AvenirNext-Regular';
+  font-weight: 500;
+  font-size: 22px;
+  color: ${colors.Obsidian};
+  margin-bottom: 16px;
+  margin-top: 0;
+  display: block;
+`;
 
-export const H3 = withHOC(InnerH3);
+StyledH3.displayName = 'H3';
+
+export const H3 = ({textLabel, ...rest}) => <StyledH3 {...rest}>{textLabel}</StyledH3>;
 
 H3.defaultProps = {
-  width: 215,
-  height: 90,
+  height: 44,
+  width: 194,
+  textLabel: 'Heading 3',
 };
 
 addPropertyControls(H3, {
-  ...TextPropertyControl,
-  ...ColorPropertyControl,
+  textLabel: {
+    title: 'Text',
+    type: ControlType.String,
+    defaultValue: 'Heading 3',
+  },
 });

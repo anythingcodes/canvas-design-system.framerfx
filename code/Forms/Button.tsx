@@ -1,136 +1,217 @@
 import * as React from 'react';
-import {cloneElement, useState} from 'react';
-import * as System from '../../baseui/button';
-import {addPropertyControls, ControlType, PropertyControls} from 'framer';
-import {Modal} from '../../baseui/modal';
-import {controls, merge} from '../generated/Button';
-import {withHOC} from '../withHOC';
-import {RawIcons} from '../Icons/utils';
-import {isModal} from '../Containers/Modal';
-import {pick} from '../../utils/pick';
+import {useEffect, createElement, memo} from 'react';
+import styled, {css} from 'styled-components';
+import {Frame, addPropertyControls, ControlType, RenderTarget} from 'framer';
+import {colors} from '../canvas';
+import {omit} from '../../utils/omit';
+import {
+  eventTriggerProps,
+  keyEventTriggerProps,
+  automaticEventTriggerProps,
+  eventTriggerPropertyControls,
+} from '../../utils/controls';
+import {sanitizePropName} from '../../utils/propNameHelpers';
+import {actions} from '../../utils/globalStore';
+import {extractEventHandlersFromProps} from '../../utils/extractEventHandlersFromProps';
 
-const InnerButton: React.SFC<any> = ({
-  willChangeTransform: _,
-  __slotKeys: __,
-  children: targetModal,
-  containsIcon,
-  icon,
-  iconLocation,
-  iconSize,
-  text,
-  ...props
-}) => {
-  let modalContent;
-  let modalProps;
-  const [isModalOpen, setIsModalOpen] = useState(false);
+// TODO: Use `a` if `link`; otherwise, `button`
+// https://github.com/styled-components/styled-components/issues/1616
+const StyledButton = styled.button`
+    font-family: 'AvenirNext-DemiBold';
+    cursor: pointer;
+    line-height: 1;
+    font-size: 14px;
+    transition: all .15s ease-out;
+    font-smoothing: auto;
+    display: inline-block;
 
-  const enhancerFunction =
-    RawIcons[icon] && containsIcon
-      ? () => {
-          const Icon = RawIcons[icon];
-          return <Icon size={iconSize} />;
+    // Buttons
+    ${({use}) =>
+      use &&
+      !use.includes('link') &&
+      css`
+        -webkit-appearance: button;
+        border-radius: 3px;
+        padding: 12px 24px;
+        white-space: nowrap;
+        border-radius: 0.1875rem;
+        border: 1px solid ${colors.Lorax};
+        text-shadow: 0 0 1px transparent;
+      `}
+
+    // Links
+    ${({use}) =>
+      use &&
+      use.includes('link') &&
+      css`
+        -webkit-appearance: none;
+        font-weight: normal;
+      `}
+
+    // Primary button
+    ${({use}) =>
+      use === 'primary' &&
+      css`
+        color: ${colors.Olaf};
+        background-color: ${colors.Lorax};
+        &:hover {
+          background-color: ${colors.BUTTON_PRIMARY_HOVER_FILL};
         }
-      : undefined;
+        &:active {
+          background-color: ${colors['Lorax Dark']};
+          border-color: ${colors['Lorax Dark']};
+        }
+      `}
 
-  const enhancer = iconLocation === 'left' ? {startEnhancer: enhancerFunction} : {endEnhancer: enhancerFunction};
-
-  const modal = targetModal.length > 0 ? targetModal[0] : null;
-
-  if (modal) {
-    const modalContentProps = {
-      ...modal.props,
-      style: {
-        top: 0,
-        left: 0,
-        width: '100%',
-        position: 'relative',
-      },
-    };
-
-    if (isModal(modal)) {
-      // this will force the modal to render a fragment, instead of a Frame-wrapped element
-      modalContentProps.standalone = false;
-
-      // pick modal props from the target modal
-      modalProps = pick(modal.props.children[0].props, ['animate', 'autofocus', 'closeable', 'role', 'size']);
+    // TODO: replace
+    &.hidden {
+        opacity: 0;
     }
 
-    modalContent = cloneElement(modal, modalContentProps);
+    ${({use}) =>
+      use === 'secondary' &&
+      css`
+        background-color: ${colors.Olaf};
+        border-color: ${colors.Lorax};
+        color: ${colors.Lorax};
+      `}
+    ${({disabled}) =>
+      disabled &&
+      css`
+        opacity: 0.3;
+        pointer-events: none;
+      `}
+`;
+
+function _Button(props) {
+  const {textLabel, use, leadingIcon, trailingIcon, additionalClassName, children, target, ...rest} = props;
+  const sanitizedTarget = sanitizePropName(target);
+  console.log(sanitizedTarget);
+
+  if (RenderTarget.current() === RenderTarget.thumbnail) {
+    return <ButtonActionThumbnail />;
   }
 
-  const handleClick = () => {
-    if (modal) {
-      setIsModalOpen(true);
-    }
-  };
+  const {getSwitchStateIndex, setSwitchStateIndex, registerSwitchStates, getAllSwitchStates} = actions;
 
-  const handleClose = () => {
-    setIsModalOpen(false);
-  };
+  // Extract event handlers from props
+  let [eventHandlers, keyEvents, automaticEvents] = extractEventHandlersFromProps(
+    props,
+    {
+      getSwitchStateIndex,
+      setSwitchStateIndex,
+      registerSwitchStates,
+      getAllSwitchStates,
+    },
+    sanitizedTarget,
+  );
+
+  const automaticEventProps = Object.keys(props)
+    .filter(prop => automaticEventTriggerProps.indexOf(prop) !== -1)
+    .map(prop => props[prop]);
+
+  // execute automatic (delay) event triggers
+  useEffect(() => {
+    if (RenderTarget.current() !== RenderTarget.preview) {
+      return;
+    }
+
+    const timeouts = automaticEvents.map(({handler}) => handler());
+
+    return () => {
+      timeouts.forEach(clearTimeout);
+    };
+  }, [...automaticEventProps, sanitizedTarget, props.id]);
+
+  const child = children && React.Children.toArray(children)[0];
 
   return (
-    <>
-      <System.Button onClick={handleClick} {...props} {...enhancer} $as={props.href ? 'a' : 'button'}>
-        {text}
-      </System.Button>
-
-      {modal && (
-        <Modal {...modalProps} onClose={handleClose} isOpen={isModalOpen} mountNode={document.body}>
-          {modalContent}
-        </Modal>
-      )}
-    </>
+    <StyledButton
+      use={use}
+      {...eventHandlers}
+      {...omit(rest, eventTriggerProps)}
+      // TODO: Rethink className as prop
+      className={additionalClassName}
+      //{...rest}
+      // style={{
+      //     color: "#fff",
+      //     fontSize: 16,
+      //     fontWeight: 600,
+      // }}
+    >
+      {leadingIcon} {textLabel} {trailingIcon}
+    </StyledButton>
   );
-};
+}
 
-export const Button = withHOC(InnerButton);
+_Button.displayName = 'Button';
+
+const __Button = memo(_Button);
+
+export const Button = props => <__Button {...props} />;
 
 Button.defaultProps = {
-  width: 87,
-  height: 50,
+  height: 44,
+  width: 112,
+  textLabel: 'Continue',
+  target: 'sharedSwitch',
+  isInteractive: true,
+  // Can add margin, padding, etc.
+  // Force conversation & collaboration
 };
 
-export const ButtonPropertyControls: PropertyControls = {
-  kind: merge(controls.kind, {}),
-  disabled: merge(controls.disabled, {}),
-  isLoading: merge(controls.isLoading, {}),
-  isSelected: merge(controls.isSelected, {}),
-  shape: merge(controls.shape, {}),
-  size: merge(controls.size, {}),
-  text: {
-    title: 'Text',
+addPropertyControls(Button, {
+  textLabel: {
+    title: 'Label',
     type: ControlType.String,
-    defaultValue: 'Button',
+    defaultValue: 'Next',
   },
-  containsIcon: {
+  use: {
+    type: ControlType.Enum,
+    defaultValue: 'primary',
+    options: ['link', 'link-dark', 'primary', 'secondary', 'tertiary', 'tertiary-light', 'destructive'],
+    optionTitles: [
+      'Link to another page',
+      'Link to another page (on dark)',
+      'Primary, most frequent page action',
+      'Alternate action',
+      'Tertiary action',
+      'Tertiary action (light)',
+      'Deleting, disconnecting, or other unrevertable actions',
+    ],
+  },
+  size: {
+    type: ControlType.Enum,
+    defaultValue: 'default',
+    options: ['default', 'small', 'extra-small'],
+    optionTitles: ['Default', 'Small', 'Extra Small'],
+  },
+  // TODO: Appearance instead of disabled
+  disabled: {
+    title: 'Disabled',
     type: ControlType.Boolean,
-    title: 'Icon',
     defaultValue: false,
   },
-  icon: {
-    type: ControlType.Enum,
-    title: 'Select Icon',
-    options: ['none', ...Object.keys(RawIcons)],
-    defaultValue: 'none',
-    hidden: props => !props.containsIcon,
+  leadingIcon: {
+    type: ControlType.ComponentInstance,
   },
-  iconSize: {
-    type: ControlType.Number,
-    title: 'Icon Size',
-    defaultValue: 16,
-    hidden: props => !props.containsIcon,
-  },
-  iconLocation: {
-    type: ControlType.Enum,
-    title: 'Icon Location',
-    options: ['left', 'right'],
-    defaultValue: 'left',
-    hidden: props => !props.containsIcon,
+  trailingIcon: {
+    type: ControlType.ComponentInstance,
   },
   children: {
     type: ControlType.ComponentInstance,
-    title: 'Opens Modal',
+    title: 'Appearance',
   },
-};
+  target: {
+    type: ControlType.String,
+    title: 'Switch',
+    defaultValue: 'sharedSwitch',
+  },
+  ...eventTriggerPropertyControls,
+});
 
-addPropertyControls(Button, ButtonPropertyControls);
+// ---------------------- Thumbnail -----------------------
+
+function ButtonActionThumbnail() {
+  return <Button use="primary" />;
+}

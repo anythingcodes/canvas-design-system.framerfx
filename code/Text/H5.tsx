@@ -1,21 +1,32 @@
-import * as System from '../../baseui/typography';
-import {addPropertyControls, ControlType} from 'framer';
 import * as React from 'react';
-import {withHOC} from '../withHOC';
-import {TextPropertyControl, ColorPropertyControl} from '../../utils/PropertyControls';
+import styled from 'styled-components';
+import {addPropertyControls, ControlType} from 'framer';
+import {colors} from '../canvas';
 
-const InnerH5: React.SFC<any> = ({text, ['children']: _, willChangeTransform: __, ...props}) => {
-  return <System.H5 {...props}>{text}</System.H5>;
-};
+const StyledH5 = styled.h5`
+  font-family: 'AvenirNext-Regular';
+  font-weight: 400;
+  font-size: 16px;
+  color: ${colors.Obsidian};
+  margin-bottom: 16px;
+  margin-top: 0;
+  display: block;
+`;
 
-export const H5 = withHOC(InnerH5);
+StyledH5.displayName = 'H5';
+
+export const H5 = ({textLabel, ...rest}) => <StyledH5 {...rest}>{textLabel}</StyledH5>;
 
 H5.defaultProps = {
-  width: 132,
-  height: 75,
+  height: 44,
+  width: 194,
+  textLabel: 'Heading 5',
 };
 
 addPropertyControls(H5, {
-  ...TextPropertyControl,
-  ...ColorPropertyControl,
+  textLabel: {
+    title: 'Text',
+    type: ControlType.String,
+    defaultValue: 'Heading 5',
+  },
 });

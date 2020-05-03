@@ -3,9 +3,9 @@ import * as System from '../../baseui/card';
 import {addPropertyControls, ControlType} from 'framer';
 import * as React from 'react';
 import {controls, merge} from '../generated/Card';
-import {ButtonPropertyControls} from '../Forms/Button';
+import {ButtonPropertyControls} from '../Forms/Button2';
 import {omit} from '../../utils/omit';
-import {ThemePropertyControl} from '../../utils/PropertyControls';
+//import {ThemePropertyControl} from '../../utils/PropertyControls';
 import {withHOC} from '../withHOC';
 
 const excludedProps = [

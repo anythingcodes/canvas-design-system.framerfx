@@ -1,5 +1,5 @@
-import Icon from '../../baseui/icon/arrow-down';
-import * as React from 'react';
+import Icon from './node_modules/baseui/icon/arrow-downw-down';
+import * as React from './node_modules/react';
 import {withIcon} from './withIcon';
 
 const Wrapper: React.SFC = props => {

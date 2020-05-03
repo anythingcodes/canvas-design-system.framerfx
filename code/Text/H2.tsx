@@ -1,21 +1,32 @@
-import * as System from '../../baseui/typography';
-import {addPropertyControls, ControlType} from 'framer';
 import * as React from 'react';
-import {withHOC} from '../withHOC';
-import {TextPropertyControl, ColorPropertyControl} from '../../utils/PropertyControls';
+import styled from 'styled-components';
+import {addPropertyControls, ControlType} from 'framer';
+import {colors} from '../canvas';
 
-const InnerH2: React.SFC<any> = ({text, ['children']: _, willChangeTransform: __, ...props}) => {
-  return <System.H2 {...props}>{text}</System.H2>;
-};
+const StyledH2 = styled.h2`
+  font-family: 'AvenirNext-Regular';
+  font-weight: 400;
+  font-size: 24px;
+  color: ${colors.Obsidian};
+  margin-bottom: 16px;
+  margin-top: 0;
+  display: block;
+`;
 
-export const H2 = withHOC(InnerH2);
+StyledH2.displayName = 'H2';
+
+export const H2 = ({textLabel, ...rest}) => <StyledH2 {...rest}>{textLabel}</StyledH2>;
 
 H2.defaultProps = {
-  width: 270,
-  height: 110,
+  height: 44,
+  width: 194,
+  textLabel: 'Heading 2',
 };
 
 addPropertyControls(H2, {
-  ...TextPropertyControl,
-  ...ColorPropertyControl,
+  textLabel: {
+    title: 'Text',
+    type: ControlType.String,
+    defaultValue: 'Heading 2',
+  },
 });

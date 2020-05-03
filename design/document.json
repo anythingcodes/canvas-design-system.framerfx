@@ -7433,7 +7433,7 @@
             "centerAnchorY": 0.58571428571428574,
             "children": [],
             "clip": true,
-            "codeComponentIdentifier": "./inputs/Button.tsx_Button",
+            "codeComponentIdentifier": "./Forms/Button2.tsx_Button2",
             "codeComponentProps": {
               "children": [
                 {

@@ -1,21 +1,31 @@
-import * as System from '../../baseui/typography';
-import {addPropertyControls, ControlType} from 'framer';
 import * as React from 'react';
-import {withHOC} from '../withHOC';
-import {TextPropertyControl, ColorPropertyControl} from '../../utils/PropertyControls';
+import styled from 'styled-components';
+import {addPropertyControls, ControlType} from 'framer';
+import {colors} from '../canvas';
 
-const InnerH4: React.SFC<any> = ({text, ['children']: _, willChangeTransform: __, ...props}) => {
-  return <System.H4 {...props}>{text}</System.H4>;
-};
+const StyledH4 = styled.h4`
+  font-family: 'AvenirNext-DemiBold';
+  font-size: 20px;
+  color: ${colors.Obsidian};
+  margin-bottom: 16px;
+  margin-top: 0;
+  display: block;
+`;
 
-export const H4 = withHOC(InnerH4);
+StyledH4.displayName = 'H4';
+
+export const H4 = ({textLabel, ...rest}) => <StyledH4 {...rest}>{textLabel}</StyledH4>;
 
 H4.defaultProps = {
-  width: 170,
-  height: 88,
+  height: 44,
+  width: 194,
+  textLabel: 'Heading 4',
 };
 
 addPropertyControls(H4, {
-  ...TextPropertyControl,
-  ...ColorPropertyControl,
+  textLabel: {
+    title: 'Text',
+    type: ControlType.String,
+    defaultValue: 'Heading 4',
+  },
 });
