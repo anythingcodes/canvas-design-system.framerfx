@@ -72,6 +72,9 @@
     "Card": {
       "ignore": false
     },
+    "NewCard": {
+      "ignore": false
+    },
     "StyledAction": {
       "ignore": false
     },
