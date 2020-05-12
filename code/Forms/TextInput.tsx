@@ -40,8 +40,6 @@ export const TextInput = ({caption, disabled, label, placeholder, value, showCap
 );
 
 TextInput.defaultProps = {
-  width: 366,
-  height: 101,
   caption: 'Caption text',
   disabled: false,
   label: 'Label text',

@@ -46,5 +46,5 @@
 		"run:dev": "yarn run chokidar 'code/**/*' -c 'framer build'"
 	},
 	"name": "@framer/lizhubspot.canvas-design-system",
-	"version": "1.7.0"
+	"version": "1.8.0"
 }

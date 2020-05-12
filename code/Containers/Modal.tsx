@@ -120,7 +120,7 @@ addPropertyControls(Modal, {
   actions: {
     type: ControlType.Array,
     title: 'Actions',
-    defaultValue: ['Cancel', 'Continue'],
+    defaultValue: ['Continue', 'Cancel'],
     propertyControl: {
       type: ControlType.String,
       title: 'Action',

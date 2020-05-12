@@ -253,8 +253,8 @@ var ModalFooter = (0, _index.styled)('div', function(_ref4) {
     paddingBottom: $theme.sizing.scale800,
     borderTopWidth: '1px',
     borderTopStyle: 'solid',
-    borderTopColor: $theme.colors.mono400,
-    textAlign: $theme.direction === 'rtl' ? 'left' : 'right',
+    borderTopColor: 'transparent',
+    textAlign: 'left',
   });
 });
 exports.ModalFooter = ModalFooter;
