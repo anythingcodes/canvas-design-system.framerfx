@@ -98,7 +98,7 @@ export const Modal = withHOC(InnerModal);
 
 Modal.defaultProps = {
   width: 450,
-  height: 345,
+  height: 450,
 };
 
 addPropertyControls(Modal, {
