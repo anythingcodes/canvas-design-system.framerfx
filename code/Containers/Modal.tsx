@@ -1,10 +1,14 @@
 import * as React from 'react';
-import {cloneElement} from 'react';
+import {Children, cloneElement, Fragment} from 'react';
+import styled from 'styled-components';
 import * as System from '../../baseui/modal';
 import {CloseIcon} from '../../baseui/modal/close-icon';
+import {H2} from '../Text/H2';
 import {addPropertyControls, ControlType, Frame} from 'framer';
 import {controls, merge} from '../generated/Modal';
 import {withHOC} from '../withHOC';
+import {colors} from '../canvas';
+import {Button} from '../Forms/Button';
 
 const style: React.CSSProperties = {
   width: '100%',
@@ -26,14 +30,45 @@ const InnerModal: React.SFC<any> = ({
     }
   };
 
-  const Wrapper = standalone ? Frame : React.Fragment;
-  const wrapperProps = standalone ? {...props, background: '#fff', style} : {};
+  const Wrapper = standalone ? Frame : Fragment;
+  const wrapperProps = standalone
+    ? {
+        ...props,
+        background: colors.Olaf,
+        borderRadius: '3px',
+        overflow: 'hidden',
+        style,
+      }
+    : {};
+
+  const ModalHeader = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: ${colors.Oz};
+    background-image: linear-gradient(-303deg, ${colors.Calypso}, #00afb2 56%, ${colors.Oz});
+    min-height: 68px;
+    padding: 4px 56px 4px 40px;
+
+    h2 {
+      font-size: 20px;
+      color: ${colors.Olaf};
+      font-weight: 600;
+      display: block;
+      line-height: normal;
+      margin-bottom: 0;
+    }
+  `;
 
   return (
     <Wrapper {...wrapperProps}>
-      <System.ModalHeader>{title}</System.ModalHeader>
+      <ModalHeader>
+        <H2 textLabel={title} />
+      </ModalHeader>
       <System.ModalBody>
-        {React.Children.map(children, content =>
+        {Children.map(children, content =>
           cloneElement(content, {
             ...content.props,
             style: {
@@ -44,8 +79,8 @@ const InnerModal: React.SFC<any> = ({
       </System.ModalBody>
       {actions.length && (
         <System.ModalFooter>
-          {actions.map(action => (
-            <System.ModalButton key={action}>{action}</System.ModalButton>
+          {actions.map((action, i) => (
+            <Button key={action} use={i === 0 ? 'primary' : 'secondary'} textLabel={action} />
           ))}
         </System.ModalFooter>
       )}

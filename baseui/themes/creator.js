@@ -1,13 +1,15 @@
-"use strict";
+'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
+Object.defineProperty(exports, '__esModule', {
+  value: true,
 });
-exports["default"] = createTheme;
+exports['default'] = createTheme;
 
-var _deepMerge = _interopRequireDefault(require("../utils/deep-merge.js"));
+var _deepMerge = _interopRequireDefault(require('../utils/deep-merge.js'));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {default: obj};
+}
 
 /*
 Copyright (c) 2018-2019 Uber Technologies, Inc.
@@ -23,7 +25,7 @@ function createTheme(primitives, overrides) {
     breakpoints: {
       small: 320,
       medium: 600,
-      large: 1136
+      large: 1136,
     },
     colors: {
       // Primary Palette
@@ -258,7 +260,7 @@ function createTheme(primitives, overrides) {
       menuFontSelected: primitives.mono1000,
       // Modal
       modalCloseColor: primitives.mono700,
-      modalCloseColorHover: primitives.mono800,
+      modalCloseColorHover: 'rgba(255, 255, 255, 0.2)',
       modalCloseColorFocus: primitives.mono800,
       // Pagination
       paginationTriangleDown: primitives.mono800,
@@ -433,117 +435,117 @@ function createTheme(primitives, overrides) {
       progressbarTrackFill: primitives.mono900,
       // Tooltip
       tooltipBackground: primitives.mono900,
-      tooltipText: primitives.mono100
+      tooltipText: primitives.mono100,
     },
     typography: {
       font100: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '12px',
         fontWeight: 'normal',
-        lineHeight: '20px'
+        lineHeight: '20px',
       },
       font150: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '12px',
         fontWeight: '500',
-        lineHeight: '20px'
+        lineHeight: '20px',
       },
       font200: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '14px',
         fontWeight: 'normal',
-        lineHeight: '20px'
+        lineHeight: '20px',
       },
       font250: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '14px',
         fontWeight: 500,
-        lineHeight: '20px'
+        lineHeight: '20px',
       },
       font300: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '16px',
         fontWeight: 'normal',
-        lineHeight: '24px'
+        lineHeight: '24px',
       },
       font350: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '16px',
         fontWeight: 500,
-        lineHeight: '24px'
+        lineHeight: '24px',
       },
       font400: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '18px',
         fontWeight: 'normal',
-        lineHeight: '28px'
+        lineHeight: '28px',
       },
       font450: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '18px',
         fontWeight: 500,
-        lineHeight: '28px'
+        lineHeight: '28px',
       },
       font550: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '20px',
         fontWeight: 500,
-        lineHeight: '28px'
+        lineHeight: '28px',
       },
       font650: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '24px',
         fontWeight: 500,
-        lineHeight: '32px'
+        lineHeight: '32px',
       },
       font750: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '28px',
         fontWeight: 500,
-        lineHeight: '36px'
+        lineHeight: '36px',
       },
       font850: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '32px',
         fontWeight: 500,
-        lineHeight: '40px'
+        lineHeight: '40px',
       },
       font950: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '36px',
         fontWeight: 500,
-        lineHeight: '44px'
+        lineHeight: '44px',
       },
       font1050: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '40px',
         fontWeight: 500,
-        lineHeight: '52px'
+        lineHeight: '52px',
       },
       font1150: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '36px',
         fontWeight: 500,
-        lineHeight: '44px'
+        lineHeight: '44px',
       },
       font1250: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '44px',
         fontWeight: 500,
-        lineHeight: '52px'
+        lineHeight: '52px',
       },
       font1350: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '52px',
         fontWeight: 500,
-        lineHeight: '64px'
+        lineHeight: '64px',
       },
       font1450: {
         fontFamily: primitives.primaryFontFamily,
         fontSize: '96px',
         fontWeight: 500,
-        lineHeight: '112px'
-      }
+        lineHeight: '112px',
+      },
     },
     sizing: {
       scale0: '2px',
@@ -565,7 +567,7 @@ function createTheme(primitives, overrides) {
       scale1600: '64px',
       scale2400: '96px',
       scale3200: '128px',
-      scale4800: '192px'
+      scale4800: '192px',
     },
     lighting: {
       shadow400: '0 1px 4px hsla(0, 0%, 0%, 0.16)',
@@ -578,38 +580,38 @@ function createTheme(primitives, overrides) {
       overlay300: 'inset 0 0 0 1000px hsla(0, 0%, 0%, 0.12)',
       overlay400: 'inset 0 0 0 1000px hsla(0, 0%, 0%, 0.16)',
       overlay500: 'inset 0 0 0 1000px hsla(0, 0%, 0%, 0.2)',
-      overlay600: 'inset 0 0 0 1000px hsla(0, 0%, 0%, 0.24)'
+      overlay600: 'inset 0 0 0 1000px hsla(0, 0%, 0%, 0.24)',
     },
     borders: {
       border100: {
         borderColor: 'hsla(0, 0%, 0%, 0.04)',
         borderStyle: 'solid',
-        borderWidth: '1px'
+        borderWidth: '1px',
       },
       border200: {
         borderColor: 'hsla(0, 0%, 0%, 0.08)',
         borderStyle: 'solid',
-        borderWidth: '1px'
+        borderWidth: '1px',
       },
       border300: {
         borderColor: 'hsla(0, 0%, 0%, 0.12)',
         borderStyle: 'solid',
-        borderWidth: '1px'
+        borderWidth: '1px',
       },
       border400: {
         borderColor: 'hsla(0, 0%, 0%, 0.16)',
         borderStyle: 'solid',
-        borderWidth: '1px'
+        borderWidth: '1px',
       },
       border500: {
         borderColor: 'hsla(0, 0%, 0%, 0.2)',
         borderStyle: 'solid',
-        borderWidth: '1px'
+        borderWidth: '1px',
       },
       border600: {
         borderColor: 'hsla(0, 0%, 0%, 0.24)',
         borderStyle: 'solid',
-        borderWidth: '1px'
+        borderWidth: '1px',
       },
       radius100: '2px',
       radius200: '4px',
@@ -629,7 +631,7 @@ function createTheme(primitives, overrides) {
       popoverBorderRadius: '0px',
 
       /** Card, Datepicker, Modal, Toast, Notification */
-      surfaceBorderRadius: '0px'
+      surfaceBorderRadius: '0px',
     },
     animation: {
       timing100: '0.25s',
@@ -637,14 +639,14 @@ function createTheme(primitives, overrides) {
       timing700: '0.6s',
       easeOutCurve: 'cubic-bezier(.2, .8, .4, 1)',
       easeInCurve: 'cubic-bezier(.8, .2, .6, 1)',
-      easeInOutCurve: 'cubic-bezier(0.4, 0, 0.2, 1)'
+      easeInOutCurve: 'cubic-bezier(0.4, 0, 0.2, 1)',
     },
     direction: 'auto',
     zIndex: {
-      modal: 2000
-    }
+      modal: 2000,
+    },
   }; // to remove the FlowFixMe, we have to make deepMerge accept a ThemeT
   // $FlowFixMe
 
-  return (0, _deepMerge["default"])(theme, overrides);
+  return (0, _deepMerge['default'])(theme, overrides);
 }
