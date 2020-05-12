@@ -236,8 +236,7 @@ var ModalBody = (0, _index.styled)('div', function(_ref3) {
   return _objectSpread({}, $theme.typography.font200, {
     color: $theme.colors.foregroundAlt,
     marginTop: $theme.sizing.scale600,
-    marginLeft: $theme.sizing.scale800,
-    marginRight: $theme.sizing.scale800,
+    padding: '24px 26px 1px',
     marginBottom: $theme.sizing.scale700,
   });
 });
@@ -246,10 +245,9 @@ ModalBody.displayName = 'ModalBody';
 var ModalFooter = (0, _index.styled)('div', function(_ref4) {
   var $theme = _ref4.$theme;
   return _objectSpread({}, $theme.typography.font200, {
-    marginTop: $theme.sizing.scale700,
-    marginLeft: $theme.sizing.scale800,
-    marginRight: $theme.sizing.scale800,
-    paddingTop: $theme.sizing.scale800,
+    marginLeft: '40px',
+    marginRight: '26px',
+    paddingTop: '0',
     paddingBottom: $theme.sizing.scale800,
     borderTopWidth: '1px',
     borderTopStyle: 'solid',

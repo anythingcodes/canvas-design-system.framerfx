@@ -97,8 +97,8 @@ const InnerModal: React.SFC<any> = ({
 export const Modal = withHOC(InnerModal);
 
 Modal.defaultProps = {
-  width: 350,
-  height: 250,
+  width: 450,
+  height: 345,
 };
 
 addPropertyControls(Modal, {
