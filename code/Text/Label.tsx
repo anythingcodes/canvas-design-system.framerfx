@@ -1,28 +1,33 @@
 import * as React from 'react';
-import * as System from '../../baseui/typography';
-import {addPropertyControls} from 'framer';
-import {withHOC} from '../withHOC';
-import {TextPropertyControl, ColorPropertyControl, UseGlobalStatePropertyControls} from '../../utils/PropertyControls';
-import {withManagedState} from '../../utils/stateManagement/withManagedState';
-import {compose} from '../../utils/compose';
+import styled from 'styled-components';
+import {addPropertyControls, ControlType} from 'framer';
+import {colors} from '../canvas';
 
-const InnerLabel: React.SFC<any> = ({text, ['children']: _, willChangeTransform: __, ...props}) => {
-  return <System.Label {...props}>{text}</System.Label>;
-};
+const StyledLabel = styled.label`
+  font-family: 'AvenirNext-DemiBold';
+  font-size: 14px;
+  user-select: none;
+  color: ${colors.Obsidian};
+  cursor: pointer;
+  padding: 8px 12px 4px 0;
+  display: inline-block;
+  vertical-align: middle;
+`;
 
-export const Label = compose(
-  withHOC,
-  withManagedState,
-)(InnerLabel);
+StyledLabel.displayName = 'Label';
+
+export const Label = ({label, ...rest}) => <StyledLabel {...rest}>{label}</StyledLabel>;
 
 Label.defaultProps = {
-  width: 80,
-  height: 20,
-  valuePropName: 'text',
+  height: 44,
+  width: 194,
+  label: 'Label',
 };
 
 addPropertyControls(Label, {
-  ...TextPropertyControl,
-  ...ColorPropertyControl,
-  ...UseGlobalStatePropertyControls,
+  label: {
+    title: 'Label',
+    type: ControlType.String,
+    defaultValue: 'Label',
+  },
 });

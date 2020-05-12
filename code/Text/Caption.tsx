@@ -1,21 +1,32 @@
 import * as React from 'react';
-import * as System from '../../baseui/typography';
-import {addPropertyControls} from 'framer';
-import {withHOC} from '../withHOC';
-import {TextPropertyControl, ColorPropertyControl} from '../../utils/PropertyControls';
+import styled from 'styled-components';
+import {addPropertyControls, ControlType} from 'framer';
+import {colors} from '../canvas';
 
-const InnerCaption: React.SFC<any> = ({text, ['children']: _, willChangeTransform: __, ...props}) => {
-  return <System.Caption {...props}>{text}</System.Caption>;
-};
+const StyledCaption = styled.small`
+  font-family: 'Avenir Next';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  display: block;
+  padding-bottom: 4px;
+  color: ${colors.Obsidian};
+`;
 
-export const Caption = withHOC(InnerCaption);
+StyledCaption.displayName = 'Caption';
+
+export const Caption = ({caption, ...rest}) => <StyledCaption {...rest}>{caption}</StyledCaption>;
 
 Caption.defaultProps = {
-  width: 85,
-  height: 20,
+  height: 44,
+  width: 194,
+  caption: 'Caption',
 };
 
 addPropertyControls(Caption, {
-  ...TextPropertyControl,
-  ...ColorPropertyControl,
+  caption: {
+    title: 'Caption',
+    type: ControlType.String,
+    defaultValue: 'Caption',
+  },
 });

@@ -3,29 +3,29 @@ import {Frame, addPropertyControls, ControlType} from 'framer';
 import {Button} from '../Forms/Button';
 import {Paragraph} from '../Text/Paragraph';
 import {H2} from '../Text/H2';
+import styled from 'styled-components';
 
 export function NewCard(props) {
   const {text, buttonText, headingText, onTap, ...rest} = props;
 
+  const StyledCard = styled.div`
+    padding: 20px;
+    background-color: white;
+    font-size: 16px;
+  `;
+
   return (
-    <Frame
+    <StyledCard
       {...rest}
       onTap={onTap}
       whileHover={{
         scale: 1.1,
       }}
-      background="#fff"
-      style={{
-        color: '#000',
-        fontSize: 16,
-        fontWeight: 600,
-        overflow: 'hidden',
-      }}
     >
-      <H2>{headingText}</H2>
+      <H2 textLabel={headingText} />
       <Paragraph text={text} />
       <Button use="primary">{buttonText}</Button>
-    </Frame>
+    </StyledCard>
   );
 }
 
